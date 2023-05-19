@@ -692,7 +692,7 @@ const ptAppInstance = Vue.createApp({
 
             // 版本更新
             try {
-                const resp = await fetch('/api/multi/getLatestVersion');
+                const resp = await fetch('/latestVersion');
                 const result = await resp.json();
                 if (window.spec.thisVersion != result.ver) {
                     const spl1 = window.spec.thisVersion.split('.'),
